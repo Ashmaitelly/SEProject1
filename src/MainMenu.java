@@ -10,13 +10,13 @@ public class MainMenu {
         while (!ans.equals("Q"))
         {
 
-            ans=JOptionPane.showInputDialog(poemrecite(poem)+"-"+author+"\n"+MENU_TEXT);
+            ans=JOptionPane.showInputDialog(fullpoem(poem)+"-"+author+"\n"+MENU_TEXT);
             switch (ans){
                 case "R":
             }
         }
     }
-    public static String poemrecite(String[] S){
+    public static String fullpoem(String[] S){
         String r="";
         for (String s:S) {
             r+=s+"\n";
