@@ -3,4 +3,8 @@ public class Recite {
     public Recite(String[] p){
         P=p;
     }
+    public String verses(int s,int e){
+        return "";
+    }
+
 }
