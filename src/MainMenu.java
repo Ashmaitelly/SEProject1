@@ -13,6 +13,8 @@ public class MainMenu {
             ans=JOptionPane.showInputDialog(fullpoem(poem)+"-"+author+"\n"+MENU_TEXT);
             switch (ans){
                 case "R":
+
+                    break;
             }
         }
     }

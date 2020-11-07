@@ -4,7 +4,11 @@ public class Recite {
         P=p;
     }
     public String verses(int s,int e){
-        return "";
+        String r="";
+        for(int i=s;i<=e;i++){
+            r+=P[i]+"\n";
+        }
+        return r;
     }
 
 }
