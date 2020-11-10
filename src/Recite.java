@@ -6,7 +6,7 @@ public class Recite {
     public String verses(int s,int e){
         String r="";
 
-        for(int i=s-1;i<=e-1;i++){
+        for(int i=s-1;i<e;i++){
             r+=P[i]+"\n";
         }
         return r;
