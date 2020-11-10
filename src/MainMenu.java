@@ -8,7 +8,7 @@ public class MainMenu {
         String[] poem= new String[]{"Near the road it flowered," ,"The mallow—and by my horse",  "Has been devoured!"};
         String author="Matsuo Basho(1684), Rendition by Harold G. Henderson";
         Recite r=new Recite(poem);
-        Matching m=new Matching(poem);
+
 
         while (true)
         {
@@ -28,9 +28,10 @@ public class MainMenu {
                     }
                     break;
                 case "M":
+                    Matching m=new Matching(poem);
                     while(true){
                         Recite r1=new Recite(m.Inc);
-                        String s=JOptionPane.showInputDialog(null,r1.fullpoem()+"\n Enter correct Line Order numbers (seperate by spaces)\"");
+                        String s=JOptionPane.showInputDialog(null,r1.fullpoem()+"\n Enter correct Line Order numbers (seperate by spaces)");
                         if(s==null){
                             break;
                         }
