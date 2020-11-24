@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MatchingTest {
+class OrderingTest {
 
     String p[]=new String[]{"aaa","bbb","ccc"};
     Ordering m=new Ordering(p);
