@@ -28,7 +28,7 @@ public class MainMenu {
                     }
                     break;
                 case "M":
-                    Matching m=new Matching(poem);
+                    Ordering m=new Ordering(poem);
                     while(true){
                         Recite r1=new Recite(m.Inc);
                         String s=JOptionPane.showInputDialog(null,r1.fullpoem()+"\n Enter correct Line Order numbers (seperate by spaces)");

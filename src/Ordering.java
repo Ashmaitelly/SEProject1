@@ -1,11 +1,11 @@
 import java.util.*;
 
-public class Matching {
+public class Ordering {
     String[] Cor;
     String[] Inc;
 
     LinkedHashSet<Integer> ord =new LinkedHashSet<Integer>();
-    public Matching(String[] p){
+    public Ordering(String[] p){
         Cor=p;
         List<String> inc=new ArrayList<String>();
         while(ord.size()<p.length){

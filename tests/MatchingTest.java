@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MatchingTest {
 
     String p[]=new String[]{"aaa","bbb","ccc"};
-    Matching m=new Matching(p);
+    Ordering m=new Ordering(p);
     String[] repeated=new String[]{"1","1","1"};
     @Test
     void matching() {
