@@ -4,11 +4,11 @@ import  javax.swing.JOptionPane;
 public class MainMenu {
 
     public static void main(String[] args) {
-        final String MENU_TEXT="R: Recite poem, M: Play matching game";
+        final String MENU_TEXT="R: Recite poem, O: Play ordering game";
         String[] poem= new String[]{"Near the road it flowered," ,"The mallow—and by my horse",  "Has been devoured!"};
         String author="Matsuo Basho(1684), Rendition by Harold G. Henderson";
         Recite r=new Recite(poem);
-
+        Ordering o=new Ordering(poem);
 
         while (true)
         {
@@ -27,16 +27,16 @@ public class MainMenu {
                         JOptionPane.showMessageDialog(null,r.verses(st,fn));
                     }
                     break;
-                case "M":
-                    Ordering m=new Ordering(poem);
+                case "O":
+                    o.shuffle();
                     while(true){
-                        Recite r1=new Recite(m.Inc);
+                        Recite r1=new Recite(o.Inc);
                         String s=JOptionPane.showInputDialog(null,r1.fullpoem()+"\n Enter correct Line Order numbers (seperate by spaces)");
                         if(s==null){
                             break;
                         }
                         String[] answ=s.split(" ");
-                        JOptionPane.showMessageDialog(null,m.matching(answ));
+                        JOptionPane.showMessageDialog(null,o.matching(answ));
                     }
 
                     break;

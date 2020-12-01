@@ -4,22 +4,10 @@ public class Ordering {
     String[] Cor;
     String[] Inc;
 
-    LinkedHashSet<Integer> ord =new LinkedHashSet<Integer>();
+
     public Ordering(String[] p){
         Cor=p;
-        List<String> inc=new ArrayList<String>();
-        while(ord.size()<p.length){
 
-            int num=(int)(Math.random()* p.length);
-
-            ord.add(num);
-
-        }
-        Iterator<Integer> it= ord.iterator();
-        while (it.hasNext()){
-            inc.add(Cor[it.next()]);
-        }
-        Inc=inc.toArray(new String[0]);
     }
     public String matching(String[] s){
         Boolean match=true;
@@ -36,6 +24,22 @@ public class Ordering {
         else{
             return "Please try again";
         }
+    }
+    public void shuffle(){
+        List<String> inc=new ArrayList<String>();
+        LinkedHashSet<Integer> ord =new LinkedHashSet<Integer>();
+        while(ord.size()<Cor.length){
+
+            int num=(int)(Math.random()* Cor.length);
+
+            ord.add(num);
+
+        }
+        Iterator<Integer> it= ord.iterator();
+        while (it.hasNext()){
+            inc.add(Cor[it.next()]);
+        }
+        Inc=inc.toArray(new String[0]);
     }
 
 }
