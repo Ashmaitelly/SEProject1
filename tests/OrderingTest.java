@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OrderingTest {
 
-    String p[]=new String[]{"aaa","bbb","ccc"};
+    String[] p =new String[]{"aaa","bbb","ccc"};
     Ordering o =new Ordering(p);
     String[] repeated=new String[]{"1","1","1"};
     @Test

@@ -10,7 +10,7 @@ public class Ordering {
 
     }
     public String matching(String[] s){
-        Boolean match=true;
+        boolean match=true;
         for(int i=0; i<s.length;i++){
             int j=Integer.parseInt(s[i]);
             if (!Cor[i].equals(Inc[j-1])){
@@ -26,8 +26,8 @@ public class Ordering {
         }
     }
     public void shuffle(){
-        List<String> inc=new ArrayList<String>();
-        LinkedHashSet<Integer> ord =new LinkedHashSet<Integer>();
+        List<String> inc= new ArrayList<>();
+        LinkedHashSet<Integer> ord = new LinkedHashSet<>();
         while(ord.size()<Cor.length){
 
             int num=(int)(Math.random()* Cor.length);
@@ -35,9 +35,8 @@ public class Ordering {
             ord.add(num);
 
         }
-        Iterator<Integer> it= ord.iterator();
-        while (it.hasNext()){
-            inc.add(Cor[it.next()]);
+        for (Integer integer : ord) {
+            inc.add(Cor[integer]);
         }
         Inc=inc.toArray(new String[0]);
     }
