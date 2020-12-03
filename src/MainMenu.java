@@ -35,8 +35,8 @@ public class MainMenu {
                         if(s==null){
                             break;
                         }
-                        String[] answ=s.split(" ");
-                        JOptionPane.showMessageDialog(null,o.matching(answ));
+
+                        JOptionPane.showMessageDialog(null,o.matching(s));
                     }
 
                     break;

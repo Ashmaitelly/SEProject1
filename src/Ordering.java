@@ -9,10 +9,11 @@ public class Ordering {
         Cor=p;
 
     }
-    public String matching(String[] s){
+    public String matching(String s){
+        String[] answ=s.split(" ");
         boolean match=true;
-        for(int i=0; i<s.length;i++){
-            int j=Integer.parseInt(s[i]);
+        for(int i=0; i<answ.length;i++){
+            int j=Integer.parseInt(answ[i]);
             if (!Cor[i].equals(Inc[j-1])){
                 match=false;
                 break;
